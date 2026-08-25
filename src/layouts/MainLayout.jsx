@@ -12,7 +12,6 @@ function MainLayout() {
       <Navbar />
 
       <div className="layout">
-
         <Sidebar />
 
         <main className="feed">
@@ -20,7 +19,6 @@ function MainLayout() {
         </main>
 
         <RightSidebar />
-
       </div>
     </>
   );

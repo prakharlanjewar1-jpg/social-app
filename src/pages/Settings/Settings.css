@@ -1,0 +1,65 @@
+.settings-page{
+    display:flex;
+    justify-content:center;
+    padding:40px;
+}
+
+.settings-card{
+    width:750px;
+    background:#fff;
+    border-radius:15px;
+    padding:35px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.settings-card h1{
+    margin-bottom:30px;
+    color:#5b5ce2;
+}
+
+.settings-section{
+    margin-bottom:35px;
+}
+
+.settings-section h2{
+    margin-bottom:15px;
+    color:#333;
+}
+
+.settings-section input{
+    width:100%;
+    padding:14px;
+    margin-bottom:15px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    font-size:15px;
+}
+
+.switch{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin:12px 0;
+    font-size:16px;
+}
+
+.switch input{
+    width:18px;
+    height:18px;
+}
+
+.save-btn{
+    width:100%;
+    padding:15px;
+    border:none;
+    background:#5b5ce2;
+    color:white;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+}
+
+.save-btn:hover{
+    background:#4647d8;
+}
