@@ -9,23 +9,37 @@ import Register from "../pages/Register/Register";
 import ForgotPassword from "../pages/ForgotPassword/ForgotPassword";
 import Profile from "../pages/Profile/Profile";
 import Settings from "../pages/Settings/Settings";
+import Communities from "../pages/Communities/Communities";
+import Messages from "../pages/Messages/Messages";
+import Notifications from "../pages/Notifications/Notifications";
+import Search from "../pages/Search/Search";
+import SavedPosts from "../pages/Savedposts/Savedposts";
+import CreatePost from "../pages/CreatePost/CreatePost";
+import MyPosts from "../pages/MyPosts/MyPosts";
+import Friends from "../pages/Friends/Friends";
 
 import ProtectedRoute from "./ProtectedRoute";
 
 function AppRoutes() {
   return (
     <Routes>
-      {/* Default Route */}
-      <Route path="/" element={<Navigate to="/login" replace />} />
+      {/* Redirect root to login */}
+      <Route
+        path="/"
+        element={<Navigate to="/login" replace />}
+      />
 
-      {/* Authentication */}
+      {/* Public authentication pages */}
       <Route element={<AuthLayout />}>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route
+          path="/forgot-password"
+          element={<ForgotPassword />}
+        />
       </Route>
 
-      {/* Protected App */}
+      {/* Protected application pages */}
       <Route
         element={
           <ProtectedRoute>
@@ -35,11 +49,24 @@ function AppRoutes() {
       >
         <Route path="/home" element={<Home />} />
         <Route path="/profile" element={<Profile />} />
-        <Route path="/settings" element={<Settings />} />
+        <Route path="/communities" element={<Communities />} />
+        <Route path="/messages" element={<Messages />} />
+        <Route
+          path="/notifications"
+          element={<Notifications />}
+        />
+        <Route path="/search" element={<Search />} /> 
+        <Route path="/saved" element={<SavedPosts />} />
+        <Route path="/create-post" element={<CreatePost />} />
+        <Route path="/my-posts" element={<MyPosts />} />
+        <Route path="/friends" element={<Friends />} />
       </Route>
 
-      {/* 404 */}
-      <Route path="*" element={<Navigate to="/login" replace />} />
+      {/* Unknown URLs */}
+      <Route
+        path="*"
+        element={<Navigate to="/login" replace />}
+      />
     </Routes>
   );
 }

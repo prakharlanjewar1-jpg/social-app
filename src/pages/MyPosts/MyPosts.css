@@ -1,0 +1,388 @@
+
+.my-posts-page {
+  min-height: 100%;
+  width: 100%;
+  min-width: 0;
+  padding: 28px;
+  box-sizing: border-box;
+  background: #f5f7fb;
+  color: #202b3c;
+}
+
+.my-posts-page * {
+  box-sizing: border-box;
+}
+
+.my-posts-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 26px;
+}
+
+.my-posts-eyebrow {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: #6558e8;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+}
+
+.my-posts-header h1 {
+  margin: 0 0 8px;
+  color: #182337;
+  font-size: clamp(25px, 3vw, 32px);
+  font-weight: 750;
+  letter-spacing: -0.7px;
+}
+
+.my-posts-header p {
+  margin: 0;
+  color: #8490a2;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.my-posts-header-icon {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  border-radius: 17px;
+  background: #e9e6ff;
+  font-size: 25px;
+}
+
+.my-posts-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 30px;
+}
+
+.my-post-stat-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  min-width: 0;
+  padding: 21px;
+  border: 1px solid #e9edf4;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0 5px 20px rgba(30, 45, 75, 0.03);
+}
+
+.my-post-stat-icon {
+  display: grid;
+  place-items: center;
+  width: 45px;
+  height: 45px;
+  flex-shrink: 0;
+  border-radius: 13px;
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.my-post-stat-icon.purple {
+  background: #efedff;
+  color: #6255e7;
+}
+
+.my-post-stat-icon.blue {
+  background: #e5f2ff;
+  color: #3788d8;
+}
+
+.my-post-stat-icon.orange {
+  background: #fff0df;
+  color: #e58a36;
+}
+
+.my-post-stat-card span {
+  display: block;
+  margin-bottom: 7px;
+  color: #8490a2;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.my-post-stat-card h2 {
+  margin: 0;
+  color: #202b3c;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.my-posts-content {
+  min-width: 0;
+}
+
+.my-posts-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.my-posts-toolbar h2 {
+  margin: 0 0 6px;
+  color: #202b3c;
+  font-size: 19px;
+  font-weight: 750;
+}
+
+.my-posts-toolbar p {
+  margin: 0;
+  color: #8994a5;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.my-posts-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.my-post-filter {
+  padding: 9px 13px;
+  border: 1px solid #e4e8f0;
+  border-radius: 9px;
+  background: #fff;
+  color: #778398;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.my-post-filter:hover {
+  border-color: #bcb5ff;
+  color: #6255e7;
+}
+
+.my-post-filter.active {
+  border-color: #6255e7;
+  background: #6255e7;
+  color: #fff;
+}
+
+.my-posts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 20px;
+}
+
+.my-post-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #e9edf4;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0 5px 20px rgba(30, 45, 75, 0.035);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.my-post-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(30, 45, 75, 0.07);
+}
+
+.my-post-image-wrap {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  max-height: 270px;
+  background: #f0f2f8;
+}
+
+.my-post-image {
+  display: block;
+  width: 100%;
+  max-height: 270px;
+  object-fit: cover;
+}
+
+.my-post-card-body {
+  padding: 18px;
+}
+
+.my-post-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.my-post-community {
+  display: inline-block;
+  max-width: calc(100% - 45px);
+  overflow: hidden;
+  padding: 7px 10px;
+  border-radius: 7px;
+  background: #efedff;
+  color: #5c50d5;
+  font-size: 10px;
+  font-weight: 750;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.my-post-delete {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  border: none;
+  border-radius: 9px;
+  background: #fff0f0;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.my-post-delete:hover {
+  background: #ffdddd;
+}
+
+.my-post-content {
+  display: -webkit-box;
+  overflow: hidden;
+  margin: 0 0 18px;
+  color: #465267;
+  font-size: 13px;
+  line-height: 1.8;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
+}
+
+.my-post-meta {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #edf0f5;
+  color: #8b96a8;
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.my-post-visibility {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.my-post-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 15px;
+  color: #758197;
+  font-size: 11px;
+}
+
+.my-post-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #278b60;
+  font-weight: 700;
+}
+
+.my-post-status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #36b37e;
+}
+
+.my-posts-empty {
+  padding: 55px 22px;
+  border: 1px dashed #dce2ec;
+  border-radius: 15px;
+  background: #fff;
+  text-align: center;
+}
+
+.my-posts-empty-icon {
+  display: grid;
+  place-items: center;
+  width: 55px;
+  height: 55px;
+  margin: 0 auto 17px;
+  border-radius: 16px;
+  background: #efedff;
+  color: #6255e7;
+  font-size: 27px;
+}
+
+.my-posts-empty h3 {
+  margin: 0 0 9px;
+  color: #344156;
+  font-size: 16px;
+}
+
+.my-posts-empty p {
+  max-width: 370px;
+  margin: 0 auto;
+  color: #8994a5;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+@media (max-width: 1000px) {
+  .my-posts-stats {
+    gap: 12px;
+  }
+
+  .my-post-stat-card {
+    padding: 16px;
+    gap: 10px;
+  }
+
+  .my-posts-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .my-posts-page {
+    padding: 16px;
+  }
+
+  .my-posts-stats {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .my-post-stat-card {
+    padding: 17px;
+  }
+
+  .my-posts-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .my-posts-filters {
+    width: 100%;
+  }
+
+  .my-post-filter {
+    flex: 1;
+    padding: 9px 7px;
+  }
+}
